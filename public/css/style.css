@@ -1,0 +1,293 @@
+
+/* ========================================
+   1. PENGATURAN DASAR WEBSITE
+======================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #333;
+    background-color: #fff;
+}
+
+/* Header tetap di atas saat halaman di-scroll */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    width: 100%;
+}
+
+/* ========================================
+   2. FOTO PROFIL
+======================================== */
+.profile-image {
+    width: 250px;
+    height: 285px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: #f1f3f5;
+}
+
+.profile-photo {
+    width: 260px;
+    height: 340px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    display: block;
+    margin: 25px auto;
+}
+
+
+/* ========================================
+   3. KARTU PROJECT
+======================================== */
+.project-card {
+    height: 100%;
+    border: 1px solid #d6d6d6;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Gambar project pada halaman daftar */
+.project-image {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+
+/* Tampilan pengganti jika gambar belum tersedia */
+.project-placeholder {
+    height: 230px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #edf3f8;
+    color: #254f3f;
+}
+
+.project-placeholder span {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.project-placeholder h5 {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+
+/* Judul dan deskripsi project */
+.project-title {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.project-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.project-tech {
+    color: #6c757d;
+    margin-top: auto;
+    margin-bottom: 16px;
+}
+
+
+/* Tombol detail project */
+.detail-button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/* ========================================
+   4. HALAMAN MY PROJECTS
+======================================== */
+.projects-section {
+    padding-top: 55px !important;
+    padding-bottom: 60px !important;
+}
+
+.projects-section h1 {
+    margin-bottom: 0;
+    color: #252525;
+}
+
+
+/* Pagination nomor halaman */
+.projects-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.projects-pagination .pagination {
+    margin-bottom: 0;
+}
+
+.projects-pagination .page-link {
+    color: #0d6efd;
+}
+
+.projects-pagination .page-item.active .page-link {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+
+/* ========================================
+   5. HALAMAN DETAIL PROJECT
+======================================== */
+.project-detail-image {
+    display: block;
+    width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+    background: #f5f7fa;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+
+/* Tampilan detail jika belum ada gambar */
+.project-detail-placeholder {
+    min-height: 350px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #edf3f8;
+    color: #254f3f;
+}
+
+.project-detail-placeholder span {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+
+/* ========================================
+   HALAMAN TENTANG SAYA
+======================================== */
+.about-profile {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-profile .profile-photo {
+    margin: 25px auto;
+}
+
+.about-information {
+    max-width: 650px;
+    margin-top: 30px;
+}
+
+.about-item {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.about-item h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #252525;
+}
+
+.about-item p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+@media (max-width: 576px) {
+    .about-profile .profile-photo {
+        width: 210px;
+        height: 280px;
+    }
+
+    .about-item {
+        margin-bottom: 24px;
+    }
+}
+
+
+/* ========================================
+   6. FOOTER
+======================================== */
+.footer {
+    color: #6c757d;
+    border-top: 1px solid #eee;
+}
+
+
+/* ========================================
+   7. TAMPILAN HP / MOBILE
+======================================== */
+@media (max-width: 767px) {
+    .projects-section {
+        padding-top: 35px !important;
+    }
+
+    .project-image,
+    .project-placeholder {
+        height: 210px;
+    }
+
+    .project-detail-placeholder {
+        min-height: 250px;
+    }
+
+    .project-detail-image {
+        max-height: 320px;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-image {
+        width: 200px;
+        height: 220px;
+    }
+
+    .profile-photo {
+        width: 210px;
+        height: 280px;
+    }
+
+    .project-title {
+        font-size: 20px;
+    }
+
+    .projects-pagination {
+        margin-top: 35px;
+    }
+}

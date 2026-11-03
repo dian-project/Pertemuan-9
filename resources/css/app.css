@@ -1,0 +1,11 @@
+/* CSS utama Dian Project */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+html {
+    scroll-behavior: smooth;
+}
